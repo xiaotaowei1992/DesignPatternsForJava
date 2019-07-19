@@ -1,0 +1,18 @@
+package com.wxt.designpattern.factorymethod.test01.witddp;
+
+/**
+ * @Auther: weixiaotao
+ * @ClassName ExportDBOperate
+ * @Date: 2018/10/22 14:19
+ * @Description:
+ */
+/**
+ * 具体的创建器实现对象，实现创建导出成数据库备份文件形式的对象
+ */
+public class ExportDBOperate extends ExportOperate{
+	@Override
+	protected ExportFileApi factoryMethod() {
+		//创建导出成数据库备份文件形式的对象
+		return new ExportDB();
+	}
+}
